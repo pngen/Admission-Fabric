@@ -1,0 +1,22 @@
+# Build directories
+/build/
+build*/
+cmake-build-*/
+/out/
+/install/
+
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Generated
+*.pyc
+__pycache__/
+compile_commands.json
+
+# OS
+.DS_Store
+Thumbs.db

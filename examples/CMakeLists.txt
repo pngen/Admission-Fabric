@@ -1,0 +1,64 @@
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(af_example_basic_admit 01_basic_admit.cpp)
+target_link_libraries(af_example_basic_admit PRIVATE admission_fabric)
+target_include_directories(af_example_basic_admit PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_insufficient_vram 02_insufficient_vram_defer.cpp)
+target_link_libraries(af_example_insufficient_vram PRIVATE admission_fabric)
+target_include_directories(af_example_insufficient_vram PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_hard_rejection 03_hard_rejection.cpp)
+target_link_libraries(af_example_hard_rejection PRIVATE admission_fabric)
+target_include_directories(af_example_hard_rejection PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_quota_denial 04_quota_denial.cpp)
+target_link_libraries(af_example_quota_denial PRIVATE admission_fabric)
+target_include_directories(af_example_quota_denial PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_token_budget 05_token_budget.cpp)
+target_link_libraries(af_example_token_budget PRIVATE admission_fabric)
+target_include_directories(af_example_token_budget PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_slo_infeasible 06_slo_infeasible.cpp)
+target_link_libraries(af_example_slo_infeasible PRIVATE admission_fabric)
+target_include_directories(af_example_slo_infeasible PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_atomic_reservation 07_atomic_multi_resource.cpp)
+target_link_libraries(af_example_atomic_reservation PRIVATE admission_fabric)
+target_include_directories(af_example_atomic_reservation PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_reservation_expiry 08_reservation_expiry.cpp)
+target_link_libraries(af_example_reservation_expiry PRIVATE admission_fabric)
+target_include_directories(af_example_reservation_expiry PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_fairness 09_fairness.cpp)
+target_link_libraries(af_example_fairness PRIVATE admission_fabric)
+target_include_directories(af_example_fairness PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_policy_replacement 10_policy_replacement.cpp)
+target_link_libraries(af_example_policy_replacement PRIVATE admission_fabric)
+target_include_directories(af_example_policy_replacement PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_prediction_feedback 11_prediction_feedback.cpp)
+target_link_libraries(af_example_prediction_feedback PRIVATE admission_fabric)
+target_include_directories(af_example_prediction_feedback PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_persistence 12_persistence.cpp)
+target_link_libraries(af_example_persistence PRIVATE admission_fabric)
+target_include_directories(af_example_persistence PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_distributed 13_distributed.cpp)
+target_link_libraries(af_example_distributed PRIVATE admission_fabric)
+target_include_directories(af_example_distributed PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_executable(af_example_persistence_recovery 14_persistence_recovery.cpp)
+target_link_libraries(af_example_persistence_recovery PRIVATE admission_fabric)
+target_include_directories(af_example_persistence_recovery PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+
+if(ADMISSION_FABRIC_ENABLE_CUDA)
+    add_executable(af_example_cuda_governed 15_cuda_governed.cpp)
+    target_link_libraries(af_example_cuda_governed PRIVATE admission_fabric admission_fabric_cuda)
+    target_include_directories(af_example_cuda_governed PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+endif()

@@ -1,0 +1,4 @@
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(af_benchmark_core benchmark_core.cpp)
+target_link_libraries(af_benchmark_core PRIVATE admission_fabric)

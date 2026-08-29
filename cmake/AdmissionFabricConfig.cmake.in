@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/AdmissionFabricTargets.cmake")
+
+# Convenience variables for consumers.
+set(ADMISSION_FABRIC_VERSION "@PROJECT_VERSION@")
+set(ADMISSION_FABRIC_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
+
+check_required_components(AdmissionFabric)
