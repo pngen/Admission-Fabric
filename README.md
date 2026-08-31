@@ -104,7 +104,7 @@ Toolchain: MSVC 19.44 (VS 2022), CMake 4.3.2, CUDA 13.1, NVIDIA GeForce RTX 5090
 | Examples | 15 runnable examples all executed their intended scenario |
 | Benchmark (completed work) | descriptor validation 61.5M ops/s; resource prediction 1.72M ops/s; admission evaluation 3.3K ops/s; atomic reservation+release 3.6M ops/s; serialization 1.22M ops/s; threaded admission 129K ops/s |
 | Downstream find_package | external consumer configured, built and ran against an installed prefix; admitted |
-| Test runtime | full suite ~1.3 s; no test timeouts |
+| Test runtime | full suite ~1.3 s |
 
 ## License
 
