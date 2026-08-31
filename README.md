@@ -108,4 +108,4 @@ Toolchain: MSVC 19.44 (VS 2022), CMake 4.3.2, CUDA 13.1, NVIDIA GeForce RTX 5090
 
 ## License
 
-Apache-2.0. Copyright 2026 Summon Software Labs. See LICENSE.
+Apache License 2.0. Copyright 2026 Summon Software Labs. No telemetry transmission.
